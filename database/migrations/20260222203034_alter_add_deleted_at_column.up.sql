@@ -1,0 +1,22 @@
+
+
+ALTER TABLE team
+ADD COLUMN deleted_at TIMESTAMPTZ;
+
+
+ALTER TABLE player
+ADD COLUMN deleted_at TIMESTAMPTZ;
+
+
+
+ALTER TABLE matches
+ADD COLUMN deleted_at TIMESTAMPTZ;
+
+
+
+ALTER TABLE match_result
+ADD COLUMN deleted_at TIMESTAMPTZ;
+
+
+ALTER TABLE match_goal
+ADD COLUMN deleted_at TIMESTAMPTZ;
