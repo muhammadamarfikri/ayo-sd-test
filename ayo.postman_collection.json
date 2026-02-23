@@ -1,0 +1,587 @@
+{
+  "info": {
+    "_postman_id": "c8f36c36-5e89-4c0f-915d-eeaedae455ee",
+    "name": "ayo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18997497",
+    "_collection_link": "https://go.postman.co/collection/18997497-c8f36c36-5e89-4c0f-915d-eeaedae455ee?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create team",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"carescata fc\",\n    \"logo\":\"http://hukjuh.com/logo1\",\n    \"founded_year\": 1976,\n    \"headquarter_address\":\"Franch\",\n    \"headquarter_city\":\"Marseile\"  \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/team-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "team-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create player",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Budi Santoso\",\n  \"team_id\": \"739ed4e4-bd85-4c2d-9c9d-1edef604846c\",\n  \"height_cm\": 175,\n  \"weight_kg\": 70,\n  \"position\": \"PENYERANG\",\n  \"shirt_number\": 9\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/player-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "player-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create match",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"match_at\": \"2026-02-25T15:30:00+07:00\",\n  \"home_team_id\": \"c77fa305-0331-4dff-989f-5aa1e843b283\",\n  \"away_team_id\": \"e904a5ff-97d2-4022-9718-d2a6076e1db2\",\n  \"status\": \"on schedule\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/match-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "match-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create match result",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"match_id\": \"f0842437-74e1-455f-be41-569917de3d7b\",\n  \"home_score\": 2,\n  \"away_score\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/match-result-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "match-result-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get team",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true,
+        "strictSSL": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/739ed4e4-bd85-4c2d-9c9d-1edef604846c/team-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "739ed4e4-bd85-4c2d-9c9d-1edef604846c",
+            "team-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get player",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true,
+        "strictSSL": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"party_code\": \"M-TEST\",\n        \"context_code\": \"\",\n        \"card_uri\": \"iuu9dawdawgh\",\n        \"user_id\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/dd291f40-6cc2-4655-80d1-6081541d6834/player-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "dd291f40-6cc2-4655-80d1-6081541d6834",
+            "player-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get match",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true,
+        "strictSSL": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/e23638d7-9e6d-4433-a15a-58d42ff212db/match-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "e23638d7-9e6d-4433-a15a-58d42ff212db",
+            "match-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get match result",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true,
+        "strictSSL": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/f0842437-74e1-455f-be41-569917de3d7b/match-result-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "f0842437-74e1-455f-be41-569917de3d7b",
+            "match-result-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update team",
+      "protocolProfileBehavior": {
+        "strictSSL": true
+      },
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\":\"carescata fc\",\n    \"logo\":\"http://hukjuh.com/logo2\",\n    \"founded_year\": 1976,\n    \"headquarter_address\":\"Franch\",\n    \"headquarter_city\":\"Marseile\"  \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/739ed4e4-bd85-4c2d-9c9d-1edef604846c/team-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "739ed4e4-bd85-4c2d-9c9d-1edef604846c",
+            "team-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update player",
+      "protocolProfileBehavior": {
+        "strictSSL": true
+      },
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Budi Santoso\",\n  \"team_id\": \"739ed4e4-bd85-4c2d-9c9d-1edef604846c\",\n  \"height_cm\": 175,\n  \"weight_kg\": 70,\n  \"position\": \"PENYERANG\",\n  \"shirt_number\": 13\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/dd291f40-6cc2-4655-80d1-6081541d6834/player-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "dd291f40-6cc2-4655-80d1-6081541d6834",
+            "player-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update match",
+      "protocolProfileBehavior": {
+        "strictSSL": true
+      },
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Budi Santoso\",\n  \"team_id\": \"739ed4e4-bd85-4c2d-9c9d-1edef604846c\",\n  \"height_cm\": 175,\n  \"weight_kg\": 70,\n  \"position\": \"PENYERANG\",\n  \"shirt_number\": 13\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/dd291f40-6cc2-4655-80d1-6081541d6834/match-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "dd291f40-6cc2-4655-80d1-6081541d6834",
+            "match-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update match result",
+      "protocolProfileBehavior": {
+        "strictSSL": true
+      },
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"match_id\": \"f0842437-74e1-455f-be41-569917de3d7b\",\n  \"home_score\": 3,\n  \"away_score\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/f0842437-74e1-455f-be41-569917de3d7b/match-result-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "f0842437-74e1-455f-be41-569917de3d7b",
+            "match-result-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete team",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/739ed4e4-bd85-4c2d-9c9d-1edef604846c/team-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "739ed4e4-bd85-4c2d-9c9d-1edef604846c",
+            "team-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete player",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/739ed4e4-bd85-4c2d-9c9d-1edef604846c/player-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "739ed4e4-bd85-4c2d-9c9d-1edef604846c",
+            "player-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete match",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/739ed4e4-bd85-4c2d-9c9d-1edef604846c/match-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "739ed4e4-bd85-4c2d-9c9d-1edef604846c",
+            "match-management"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete match result",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg0MjQ2MDQsImp0aSI6ImpkaWQiLCJpc3MiOiI5MTNzc1VkMWlTbUp1bU5Lb25yOG16NDhhSVRuc0ZheiIsInN1YiI6Ik1lcmNoYW50In0.sqcYdqTPa8k_g3uad0kr_4-awLoe75eDwFqonIHMCOI",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4040/api/f0842437-74e1-455f-be41-569917de3d7b/match-result-management",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4040",
+          "path": [
+            "api",
+            "f0842437-74e1-455f-be41-569917de3d7b",
+            "match-result-management"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
